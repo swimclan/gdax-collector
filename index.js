@@ -32,3 +32,7 @@ bchChart.on('close', candle => {
   BCHTick.create(tick(candle));
 });
 
+btcChart.on('error', err => console.log(err));
+ethChart.on('error', err => console.log(err));
+bchChart.on('error', err => console.log(err));
+ltcChart.on('error', err => console.log(err));

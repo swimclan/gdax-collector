@@ -1,12 +1,13 @@
 const {get} = require('lodash');
+require('dotenv').config();
 
 const config = {
   db: {
-    host: 'herthamdb',
+    host: process.env.DB_HOST,
     name: 'price_history',
     port: 5432,
-    username: 'postgres',
-    password: ''
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
   }
 }
 

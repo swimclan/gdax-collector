@@ -4,15 +4,20 @@
   "description": "A data collection app for gdax candlestick charts",
   "main": "index.js",
   "scripts": {
+    "logs": "./node_modules/pm2/bin/pm2 logs",
+    "start": "./node_modules/pm2/bin/pm2 start index.js --name hertham --watch",
+    "stop": "./node_modules/pm2/bin/pm2 kill",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Matthew Herron",
   "license": "ISC",
   "dependencies": {
-    "gdax-candles": "^1.5.2",
+    "dotenv": "^6.2.0",
+    "gdax-candles": "^1.6.5",
     "lodash": "^4.17.10",
     "pg": "^7.4.3",
     "pg-hstore": "^2.3.2",
+    "pm2": "^3.3.1",
     "sequelize": "^4.38.0"
   }
 }
